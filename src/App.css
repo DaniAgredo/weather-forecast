@@ -1,0 +1,231 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-size: cover;
+	background-position: center;
+	transition: background-image 0.5s ease-in-out;
+}
+.imagen-fondo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.contenedor {
+	max-width: 300px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: hsla(198, 89%, 64%, 0.7);
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(32, 20, 211, 0.1);
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Pacifico', cursive;
+	font-size: 16px;
+	color: #333;
+}
+
+.contenedor:hover {
+	transition: none;
+	box-shadow: 0 0 20px rgba(195, 206, 218, 0.5);
+	transition: transform 0.5s ease-in-out;
+	z-index: 1;
+}
+
+.contenedor:active {
+	transform: scale(0.9);
+	background-color: rgba(200, 200, 200, 1);
+	box-shadow: 0 0 10px rgb(52, 33, 228);
+}
+
+.contenedor > .titulo {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.pronostico-titulo-texto {
+	font-family: 'pasifico', cursive;
+	font-size: 30px;
+	font-weight: bold;
+	color: #333;
+	transition: all 0.3s ease-in-out;
+	text-align: center; /* Alineación centrada */
+	margin-bottom: 20px;
+}
+.pronostico-dias {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+
+.pronostico-titulo:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 20px rgba(195, 206, 218, 0.5);
+	transition: transform 0.3s ease-in-out;
+}
+.tarjeta-clima {
+	transition: none;
+	background-color: hsla(198, 89%, 64%, 0.7);
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+	margin: 5px;
+	flex-basis: 30%;
+	transition: all 0.5s ease-in-out;
+	transform: scale(0.8);
+	flex-shrink: 0;
+	flex-basis: calc(5% - 10px);
+	box-sizing: border-box;
+
+	flex-basis: calc(5% - 10px);
+	box-sizing: border-box;
+}
+.pronostico-externo {
+	margin-top: 20px;
+	padding-bottom: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tarjeta-clima-externa {
+	background-color: hsla(198, 89%, 64%, 0.7);
+	padding: 8px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+	margin: 5px;
+	width: calc(25% - 20px);
+	transition: all 0.5s ease-in-out;
+	transform: scale(0.8);
+}
+.tarjeta-clima:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	background-color: hsla(198, 89%, 54%, 0.7);
+	transform: scale(1.1);
+	transition: transform 0.5s ease-in-out;
+	z-index: 1;
+}
+
+.tarjeta-clima:active {
+	background-color: rgba(200, 200, 200, 1);
+	box-shadow: 0 0 10px rgb(52, 33, 228);
+}
+
+.tarjeta-clima h3,
+.tarjeta-clima p {
+	font-family: 'Pacifico', cursive;
+	font-size: 15px;
+	color: #333;
+}
+
+.tarjeta-clima-externa {
+	background-color: hsla(198, 89%, 54%, 0.7);
+	padding: 8px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.clima {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 18px;
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.clima img {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+}
+
+.clima img:hover {
+	transform: scale(1.2);
+}
+
+.botones-internos {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.boton-cambiar-unidad {
+	background-color: rgba(255, 255, 255, 0.5);
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.boton-cambiar-unidad:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+	transform: scale(1.1);
+	color: rgb(52, 33, 228);
+}
+.boton-cambiar-unidad {
+	z-index: 2;
+	position: relative;
+}
+
+@media (max-width: 768px) {
+	.contenedor {
+		max-width: 300px;
+		margin: 20px auto;
+	}
+	.tarjeta-clima {
+		width: 100%;
+		padding: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.contenedor {
+		max-width: 250px;
+		margin: 15px auto;
+	}
+	.tarjeta-clima {
+		width: 100%;
+		padding: 8px;
+	}
+}
+
+@media (max-width: 320px) {
+	.contenedor {
+		max-width: 200px;
+		margin: 10px auto;
+	}
+	.tarjeta-clima {
+		width: 60%;
+		padding: 10px;
+	}
+}
+
+@media (max-width: 240px) {
+	.contenedor {
+		max-width: 150px;
+		margin: 5px auto;
+	}
+	.tarjeta-clima {
+		width: 100%;
+		padding: 3px;
+	}
+}
